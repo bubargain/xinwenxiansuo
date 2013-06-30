@@ -1,0 +1,87 @@
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ app_begin ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.004041s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.004137s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_template ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run LocationTemplate Behavior [ RunTime:0.001188s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_template ] --END-- [ RunTime:0.001268s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_parse ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run ParseTemplate Behavior [ RunTime:0.032062s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_parse ] --END-- [ RunTime:0.032147s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_filter ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run ContentReplace Behavior [ RunTime:0.000727s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run TokenBuild Behavior [ RunTime:0.000709s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000641s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run ShowRuntime Behavior [ RunTime:0.000827s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003102s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_end ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run ShowPageTrace Behavior [ RunTime:0.000771s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_end ] --END-- [ RunTime:0.000838s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_template ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run LocationTemplate Behavior [ RunTime:0.000376s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_template ] --END-- [ RunTime:-0.036538s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_parse ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run ParseTemplate Behavior [ RunTime:0.003749s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_parse ] --END-- [ RunTime:-0.004830s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_filter ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run ContentReplace Behavior [ RunTime:0.000081s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run TokenBuild Behavior [ RunTime:0.000159s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000019s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run ShowRuntime Behavior [ RunTime:0.000136s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_filter ] --END-- [ RunTime:-0.005548s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_end ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Run ShowPageTrace Behavior [ RunTime:0.000037s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_end ] --END-- [ RunTime:-0.005264s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Tag[ route_check ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Run CheckRoute Behavior [ RunTime:0.011418s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Tag[ route_check ] --END-- [ RunTime:0.011517s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Tag[ app_begin ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000587s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000657s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Tag[ view_template ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Run LocationTemplate Behavior [ RunTime:0.000532s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Tag[ view_template ] --END-- [ RunTime:0.000608s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Tag[ view_parse ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Run ParseTemplate Behavior [ RunTime:0.006530s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Tag[ view_parse ] --END-- [ RunTime:0.006612s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Tag[ view_filter ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Run ContentReplace Behavior [ RunTime:0.000578s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Run TokenBuild Behavior [ RunTime:0.000484s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000261s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Run ShowRuntime Behavior [ RunTime:0.000469s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Tag[ view_filter ] --END-- [ RunTime:0.001981s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Tag[ view_end ] --START--
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Run ShowPageTrace Behavior [ RunTime:0.000419s ]
+[ 2013-04-23T14:10:38+08:00 ] /Thinkphp_project/Index/checkEnv | INFO: Tag[ view_end ] --END-- [ RunTime:0.000486s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ app_begin ] --START--
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run ReadHtmlCache Behavior [ RunTime:0.001368s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001468s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_template ] --START--
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run LocationTemplate Behavior [ RunTime:0.001692s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_template ] --END-- [ RunTime:0.001782s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_parse ] --START--
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run ParseTemplate Behavior [ RunTime:0.009500s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_parse ] --END-- [ RunTime:0.009589s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_filter ] --START--
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run ContentReplace Behavior [ RunTime:0.000890s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run TokenBuild Behavior [ RunTime:0.000860s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000857s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run ShowRuntime Behavior [ RunTime:0.000853s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_filter ] --END-- [ RunTime:0.003675s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_end ] --START--
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run ShowPageTrace Behavior [ RunTime:0.000790s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_end ] --END-- [ RunTime:0.000864s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_template ] --START--
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run LocationTemplate Behavior [ RunTime:0.000408s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_template ] --END-- [ RunTime:-0.014561s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_parse ] --START--
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run ParseTemplate Behavior [ RunTime:0.003873s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_parse ] --END-- [ RunTime:-0.005441s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_filter ] --START--
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run ContentReplace Behavior [ RunTime:0.000094s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run TokenBuild Behavior [ RunTime:0.000112s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000021s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run ShowRuntime Behavior [ RunTime:0.000163s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_filter ] --END-- [ RunTime:-0.005708s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_end ] --START--
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Run ShowPageTrace Behavior [ RunTime:0.000042s ]
+[ 2013-04-23T22:46:41+08:00 ] /Thinkphp_project/ | INFO: Tag[ view_end ] --END-- [ RunTime:-0.005401s ]
