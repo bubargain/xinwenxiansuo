@@ -35,7 +35,7 @@
           <li><a href="#">关于我们</a></li>
           <li><a href="#">媒体合作</a></li>
         </ul>
-        <h3 class="muted">新闻线索</h3>
+        <h3 class="muted">新闻爆料</h3>
       </div>
 
       <hr>

@@ -14,16 +14,17 @@ class IndexAction extends Action
 
     }
 	
+	public function head()
+	{
+		$this->display();
+	}
+	
 	public function footer()
 	{
 		$this->display();
 	}
 
-    /**
-    +----------------------------------------------------------
-    * 探针模式
-    +----------------------------------------------------------
-    */
+  
     public function newsform()
     {
 		$this->list=Array(
@@ -44,5 +45,31 @@ class IndexAction extends Action
     	
     }
 
+    /*
+     * save the form into db
+     * @author daniel
+     */
+    public function uploadForm()
+    {
+    	$data = Array();
+    	$data['title']=$this->_post('title');
+    	$data['catagory']=$this->_post('catagory');
+    	$data['contents']= $_POST['myEditor'];
+    	
+    	
+    	if(! $this->_post('annUpload')  ) //非匿名提交
+    	{
+    		$author = $this->_post('author');
+    		$phone = $this->_post('phone');
+    		$email = $this->_post('email');
+    		$address=$this->_post('address');
+    	}
+    	else 
+    	{
+    		$data['user_id'] = 0;
+    	}
+    	var_dump($data);
+    	
+    }
 }
 ?>
