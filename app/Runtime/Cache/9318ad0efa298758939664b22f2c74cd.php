@@ -15,6 +15,7 @@
     <meta name="robots" content="index,follow">
     <meta name="application-name" content="bootcss.com">
 
+
     <!-- Le styles -->
     <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet">
     <link href="__PUBLIC__/css/bootstrap-responsive.css" rel="stylesheet">
@@ -48,22 +49,24 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="__PUBLIC__/assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="__PUBLIC__/assets/ico/apple-touch-icon-114-precomposed.png">
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="__PUBLIC__/assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="__PUBLIC__/assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="__PUBLIC__/assets/ico/favicon.png">
+      <link rel="apple-touch-icon-precomposed" href="__PUBLIC__/assets/ico/apple-touch-icon-57-precomposed.png">
+         <link rel="shortcut icon" href="__PUBLIC__/assets/ico/favicon.png">
 
 
-    <script>
+
+
+ <script>
 var _hmt = _hmt || [];
 window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
 </script>
 <script  src="__PUBLIC__/ueditor/ueditor.config.js"></script>
 	<script  src="__PUBLIC__/ueditor/ueditor.all.js"></script> 
-  </head>
-   
-  
+</head>
+
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
 
-    <!-- Navbar
+    
+  <!-- Navbar
     ================================================== -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -90,7 +93,6 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
       </div>
     </div>
   
-  
 <!-- Subhead
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
@@ -105,17 +107,17 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
 </div>
 
 <div class="container">
-	<form class="navbar-form" enctype="multipart/form-data" method='post'>
+	<form class="navbar-form" enctype="multipart/form-data" method='post' action="uploadForm">
         <fieldset>
         <legend>信息概要</legend>
         <label>标题（少于50字）：</label>
-        <input type="text" class="span6" placeholder="输入描述信息" required>
+        <input name="title" type="text" class="span6" placeholder="输入描述信息" required	>
         <span class="help-block">请简明清晰的描述信息（少于50字）：</span>
        
         <label>类别</label>
             <div class="btn-group">
           
-                <select name="catalog"  >
+                <select name="catagory"  >
                 	<?php if(is_array($list)): foreach($list as $key=>$data): ?><option value='<?php echo ($data); ?>'><?php echo ($data); ?></option><?php endforeach; endif; ?>	 
                 </select>
              
@@ -123,13 +125,15 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
 		<br/>
 		<legend>详细信息</legend>    
         <div>   
-       		<textarea name="后台取值的key" id="myEditor" style="min-height:300px">请详细描述您要报道的信息...</textarea>
+       		<textarea name="myEditor" id="myEditor" style="min-height:300px">请详细描述您要报道的信息...</textarea>
+			
 			<script type="text/javascript">
                 //var editor = new UE.ui.Editor();
                 //editor.render("myEditor");
                 //1.2.4以后可以使用一下代码实例化编辑器
                 UE.getEditor('myEditor')
             </script> 
+          
        	    <span class="help-block">对事件的详细描述，可以添加图片，视频等资料</span>
         </div>
  
@@ -137,9 +141,11 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
         <br/>	
             <legend >个人资料
                  <label class="checkbox">
-                    <input type="checkbox" id="personalInfoCheckbox" onclick="setPersonalInfo();">匿名提交
+                    <input type="checkbox" name='annUpload' id="personalInfoCheckbox" onclick="setPersonalInfo();">
+                    <a id='annUpload'  title="" data-toggle="tooltip" href="#" data-original-title="选择匿名提交，则无法获得媒体反馈！">匿名提交</a>
                  </label>
             </legend>
+            
             
             <div id="personalInfo" style="display:inline">
                 <div class="controls">
@@ -158,14 +164,31 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
     	
     	<div class="span12">
     	
-    	      <ul class="nav nav-pills">
-                <li class="active">
-                <a href="#">中央媒体</a>
-                </li>
-                <li><a href="#">地方媒体</a></li>
-                 <li><a href="#">名记</a></li>
-                <li><a href="#">自媒体</a></li>
-                </ul>
+    	      <div class="bs-docs-example">
+            <ul class="nav nav-tabs" id="myTab">
+              <li class="active"><a data-toggle="tab" href="#CentralMedia">中央媒体</a></li>
+              <li class=""><a data-toggle="tab" href="#LocalMedia">地方媒体</a></li>
+              <li class=""><a data-toggle="tab" href="#PersonalMedia">自媒体</a></li>
+              
+            </ul>
+            <div class="tab-content" id="myTabContent" style="min-height:100px">
+              <div id="CentralMedia" class="tab-pane fade  active in">
+                	<?php $__FOR_START__=1;$__FOR_END__=10;for($i=$__FOR_START__;$i < $__FOR_END__;$i+=1){ ?><label class="span2 checkbox">
+                        	<input type="checkbox"><img src="http://css.tv.itc.cn/channel/header-images/logo_tv.png" />
+                        </label><?php } ?>
+              </div>
+              <div id="LocalMedia" class="tab-pane fade">
+               		<?php $__FOR_START__=1;$__FOR_END__=12;for($i=$__FOR_START__;$i < $__FOR_END__;$i+=1){ ?><label class="span2 checkbox">
+                        	<input type="checkbox"><img src="http://css.tv.itc.cn/channel/header-images/logo_tv.png" />
+                        </label><?php } ?>
+              </div>
+              <div id="PersonalMedia" class="tab-pane fade">
+                	<?php $__FOR_START__=1;$__FOR_END__=5;for($i=$__FOR_START__;$i < $__FOR_END__;$i+=1){ ?><label class="span2 checkbox">
+                        	<input type="checkbox"><img src="http://css.tv.itc.cn/channel/header-images/logo_tv.png" />
+                        </label><?php } ?>
+              </div>
+            </div>
+          </div>
 
       
        </div>
@@ -175,7 +198,7 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
         <br/>
         <legend>完成</legend>
          <label class="checkbox">
-       		 <input type="checkbox"><a href="/Index/intro" target="_blank"> 阅读并同意新闻线索权利及义务声明</a>
+       		 <input type="checkbox" required><a href="/Index/intro" target="_blank"> 阅读并同意新闻线索权利及义务声明</a>
          </label>
         <button type="submit" class="btn btn-primary">确认提交</button>
         </fieldset>
@@ -193,9 +216,10 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
 
  
  <script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
- <script src="__PUBLIC__/js/bootstrap.js"></script>
+ <script src="__PUBLIC__/js/bootstrap.min.js"></script>
         
   <SCRIPT LANGUAGE="JavaScript">
+  	$('#annUpload').tooltip('hide')
 	function setPersonalInfo()
 	{
 			if(document.getElementById('personalInfoCheckbox').checked)

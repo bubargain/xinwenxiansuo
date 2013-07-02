@@ -1,0 +1,20 @@
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Tag[ app_begin ] --START--
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000904s ]
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Tag[ app_begin ] --END-- [ RunTime:0.001037s ]
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Tag[ view_template ] --START--
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Run LocationTemplate Behavior [ RunTime:0.001090s ]
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Tag[ view_template ] --END-- [ RunTime:0.001196s ]
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Tag[ view_parse ] --START--
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Run ParseTemplate Behavior [ RunTime:0.009273s ]
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Tag[ view_parse ] --END-- [ RunTime:0.009374s ]
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Tag[ view_filter ] --START--
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Run ContentReplace Behavior [ RunTime:0.000545s ]
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Run TokenBuild Behavior [ RunTime:0.000530s ]
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Run WriteHtmlCache Behavior [ RunTime:0.000383s ]
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Run ShowRuntime Behavior [ RunTime:0.000585s ]
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Tag[ view_filter ] --END-- [ RunTime:0.002240s ]
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Tag[ view_end ] --START--
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Run ShowPageTrace Behavior [ RunTime:0.000513s ]
+[ 2013-07-02T23:16:30+08:00 ] / | INFO: Tag[ view_end ] --END-- [ RunTime:0.000584s ]
+[ 2013-07-02T23:16:30+08:00 ] /assets/ico/favicon.png | ERR: (ThinkException) 无法加载模块assets
+[ 2013-07-02T23:16:30+08:00 ] /assets/ico/favicon.png | ERR: (ThinkException) 无法加载模块assets
