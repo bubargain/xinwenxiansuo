@@ -149,18 +149,18 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
             
             <div id="personalInfo" style="display:inline">
                 <div class="controls">
-                    <span class="span4">姓名：<input type="text" placeholder="姓名"/></span>
-                    <span class="span4">联系方式：<input type="text" placeholder="联系电话/手机"/></span>
-                    <span class="span4">电子邮箱：<input type="email"  placeholder="电子邮箱" /></span>
+                    <span class="span4">姓名：<input name="author" type="text" placeholder="姓名"/></span>
+                    <span class="span4">联系方式：<input name="phone" type="text" placeholder="联系电话/手机"/></span>
+                    <span class="span4">电子邮箱：<input name="email" type="email"  placeholder="电子邮箱" /></span>
                 </div>
                 <div class="controls">
-                    <span class="span12">地址：<input class="span6" type="text" placeholder="您的邮寄地址"/></span>
+                    <span class="span12">地址：<input class="span6" name="address" type="text" placeholder="您的邮寄地址"/></span>
                 </div>
             </div>
         </div>
         
         <br/>
-        <legend>选择发送媒体</legend>
+	<legend>选择发送媒体</legend>
     	
     	<div class="span12">
     	
@@ -173,19 +173,19 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
             </ul>
             <div class="tab-content" id="myTabContent" style="min-height:100px">
               <div id="CentralMedia" class="tab-pane fade  active in">
-                	<?php $__FOR_START__=1;$__FOR_END__=10;for($i=$__FOR_START__;$i < $__FOR_END__;$i+=1){ ?><label class="span2 checkbox">
-                        	<input type="checkbox"><img src="http://css.tv.itc.cn/channel/header-images/logo_tv.png" />
-                        </label><?php } ?>
+                	<?php if(is_array($central_media)): foreach($central_media as $key=>$item): ?><label class="span2 checkbox">
+                        	<input type="checkbox" name="media[]" value='<?php echo ($item["media_id"]); ?>'><img src="<?php echo ($item["thumb"]); ?>" />
+                        </label><?php endforeach; endif; ?>
               </div>
               <div id="LocalMedia" class="tab-pane fade">
-               		<?php $__FOR_START__=1;$__FOR_END__=12;for($i=$__FOR_START__;$i < $__FOR_END__;$i+=1){ ?><label class="span2 checkbox">
-                        	<input type="checkbox"><img src="http://css.tv.itc.cn/channel/header-images/logo_tv.png" />
-                        </label><?php } ?>
+               		<?php if(is_array($local_media)): foreach($local_media as $key=>$item): ?><label class="span2 checkbox">
+                        	<input type="checkbox" name="media[]" value='<?php echo ($item["media_id"]); ?>'><img src="<?php echo ($item["thumb"]); ?>" />
+                        </label><?php endforeach; endif; ?>
               </div>
               <div id="PersonalMedia" class="tab-pane fade">
-                	<?php $__FOR_START__=1;$__FOR_END__=5;for($i=$__FOR_START__;$i < $__FOR_END__;$i+=1){ ?><label class="span2 checkbox">
-                        	<input type="checkbox"><img src="http://css.tv.itc.cn/channel/header-images/logo_tv.png" />
-                        </label><?php } ?>
+                	<?php if(is_array($self_media)): foreach($self_media as $key=>$item): ?><label class="span2 checkbox">
+                        	<input type="checkbox" name="media[]" value='<?php echo ($item["media_id"]); ?>'><img src="<?php echo ($item["thumb"]); ?>" />
+                        </label><?php endforeach; endif; ?>
               </div>
             </div>
           </div>
@@ -196,26 +196,27 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
         
         
         <br/>
-        <legend>完成</legend>
-         <label class="checkbox">
+        <legend>选择发送媒体</legend>
+       <label class="checkbox">
        		 <input type="checkbox" required><a href="/Index/intro" target="_blank"> 阅读并同意新闻线索权利及义务声明</a>
-         </label>
-        <button type="submit" class="btn btn-primary">确认提交</button>
+         </label> 
+         <button type="submit" class="btn btn-primary">下一步 选择媒体</button>
         </fieldset>
     </form>
 </div>
 
 
+
+  
 <footer class="footer">
       <div class="container">
         <p> Copyright by @ 新闻线索 2013</p>
       </div>
     </footer>
 
-
-
  
  <script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script src="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
  <script src="__PUBLIC__/js/bootstrap.min.js"></script>
         
   <SCRIPT LANGUAGE="JavaScript">
@@ -234,6 +235,6 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
 	}
 	
   </script>
-  
+ 
 </body>
 </html>

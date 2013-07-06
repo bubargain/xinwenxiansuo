@@ -9,10 +9,18 @@ class IndexAction extends Action
     +----------------------------------------------------------
     */
     public function index()
-    {	 $this->title ="新闻线索中文网";
+    {	
+    	
+    	$this->title ="新闻线索中文网";
         $this->display("Index:index");
 
     }
+	
+	public function about()
+	{
+		$this->display("Index:aboutus");
+	}
+	
 	
 	public function head()
 	{
@@ -27,6 +35,11 @@ class IndexAction extends Action
   
     public function newsform()
     {
+    	$media = M('media');
+    	$this->central_media = $media -> query('select * from sx_media where media_catagory =1');
+    	$this->local_media = $media -> query('select * from sx_media where media_catagory =2');
+    	$this->self_media = $media -> query('select * from sx_media where media_catagory =3');
+    	
 		$this->list=Array(
 			'财经',
 			'生活娱乐',
@@ -46,7 +59,7 @@ class IndexAction extends Action
     }
 
     /*
-     * save the form into db
+     * save form into db and send emails
      * @author daniel
      */
     public function uploadForm()
@@ -56,19 +69,29 @@ class IndexAction extends Action
     	$data['catagory']=$this->_post('catagory');
     	$data['contents']= $_POST['myEditor'];
     	
-    	
-    	if(! $this->_post('annUpload')  ) //非匿名提交
+    	if($this->_post('annUpload') == null  ) //非匿名提交
     	{
-    		$author = $this->_post('author');
-    		$phone = $this->_post('phone');
-    		$email = $this->_post('email');
-    		$address=$this->_post('address');
+    		$udata['user_name'] = $this->_post('author');
+    		$udata['telephone'] = $this->_post('phone');
+    		$udata['email'] = $this->_post('email');
+    		$udata['address']=$this->_post('address');
+    		$user = M('user');
+    		$data['user_id']=$user->add($udata);
     	}
     	else 
     	{
     		$data['user_id'] = 0;
     	}
-    	var_dump($data);
+    	$news = M('news');
+    	$news_id=$news->add($data);
+    	$newstomedia = M('newstomedia');
+    	foreach($_POST['media'] as $oneRow)
+    	{
+    		$newstomedia->add(Array(
+    				'news_id' => $news_id,
+    				'media_id' => $oneRow
+    		));
+    	}
     	
     }
 }

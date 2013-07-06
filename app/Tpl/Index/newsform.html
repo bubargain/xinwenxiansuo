@@ -137,7 +137,7 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
         </div>
         
         <br/>
-        <legend>选择发送媒体</legend>
+	<legend>选择发送媒体</legend>
     	
     	<div class="span12">
     	
@@ -150,25 +150,25 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
             </ul>
             <div class="tab-content" id="myTabContent" style="min-height:100px">
               <div id="CentralMedia" class="tab-pane fade  active in">
-                	<for start='1' end='10'>
+                	<foreach name='central_media' item='item'>
                     	<label class="span2 checkbox">
-                        	<input type="checkbox"><img src="http://css.tv.itc.cn/channel/header-images/logo_tv.png" />
+                        	<input type="checkbox" name="media[]" value='{$item.media_id}'><img src="{$item.thumb}" />
                         </label>
-                    </for>
+                    </foreach>
               </div>
               <div id="LocalMedia" class="tab-pane fade">
-               		<for start='1' end='12'>
+               		<foreach name='local_media' item='item'>
                     	<label class="span2 checkbox">
-                        	<input type="checkbox"><img src="http://css.tv.itc.cn/channel/header-images/logo_tv.png" />
+                        	<input type="checkbox" name="media[]" value='{$item.media_id}'><img src="{$item.thumb}" />
                         </label>
-                    </for>
+                    </foreach>
               </div>
               <div id="PersonalMedia" class="tab-pane fade">
-                	<for start='1' end='5'>
+                	<foreach name='self_media' item='item'>
                     	<label class="span2 checkbox">
-                        	<input type="checkbox"><img src="http://css.tv.itc.cn/channel/header-images/logo_tv.png" />
+                        	<input type="checkbox" name="media[]" value='{$item.media_id}'><img src="{$item.thumb}" />
                         </label>
-                    </for>
+                    </foreach>
               </div>
             </div>
           </div>
@@ -179,37 +179,15 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
         
         
         <br/>
-        <legend>完成</legend>
-         <label class="checkbox">
+        <legend>选择发送媒体</legend>
+       <label class="checkbox">
        		 <input type="checkbox" required><a href="/Index/intro" target="_blank"> 阅读并同意新闻线索权利及义务声明</a>
-         </label>
-        <button type="submit" class="btn btn-primary">确认提交</button>
+         </label> 
+         <button type="submit" class="btn btn-primary">下一步 选择媒体</button>
         </fieldset>
     </form>
 </div>
 
-<include file="footer"/>
 
- 
- <script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
- <script src="__PUBLIC__/js/bootstrap.min.js"></script>
-        
-  <SCRIPT LANGUAGE="JavaScript">
-  	$('#annUpload').tooltip('hide')
-	function setPersonalInfo()
-	{
-			if(document.getElementById('personalInfoCheckbox').checked)
-			{
-				document.getElementById('personalInfo').style.display="none";
-			}
-			else
-			{
-				document.getElementById('personalInfo').style.display="inline";
-			}
-			
-	}
-	
-  </script>
-  
-</body>
-</html>
+
+  <include file="footer"/>
