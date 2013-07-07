@@ -11,7 +11,6 @@
 	//定义项目名称和路径
 	define('APP_NAME', 'app');
 	define('APP_PATH', './app/');
-	
 	// 加载框架入口文件
 	require_once(THINK_PATH."ThinkPHP.php");
 	//实例化一个网站应用实例

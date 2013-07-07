@@ -28,6 +28,12 @@
   font-weight: normal;
 }
 
+.thumbpic
+{
+	width:170px;
+	height:105px;
+}
+
 #scrollUp {
   bottom: 20px;
   right: 20px;
@@ -152,21 +158,22 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
               <div id="CentralMedia" class="tab-pane fade  active in">
                 	<foreach name='central_media' item='item'>
                     	<label class="span2 checkbox">
-                        	<input type="checkbox" name="media[]" value='{$item.media_id}'><img src="{$item.thumb}" />
+                        	<input type="checkbox" name="media[]" value='{$item.media_id}'>
+                        	<div class='text-center text-info'><img class="thumbpic" src="{$item.thumb}" />{$item.media_name}</div>
                         </label>
                     </foreach>
               </div>
               <div id="LocalMedia" class="tab-pane fade">
                		<foreach name='local_media' item='item'>
                     	<label class="span2 checkbox">
-                        	<input type="checkbox" name="media[]" value='{$item.media_id}'><img src="{$item.thumb}" />
+                        	<div class='text-center text-info'><input type="checkbox" name="media[]" value='{$item.media_id}'><img class="thumbpic" src="{$item.thumb}" />{$item.media_name}</div>
                         </label>
                     </foreach>
               </div>
               <div id="PersonalMedia" class="tab-pane fade">
                 	<foreach name='self_media' item='item'>
                     	<label class="span2 checkbox">
-                        	<input type="checkbox" name="media[]" value='{$item.media_id}'><img src="{$item.thumb}" />
+                        	<div class='text-center text-info'><input type="checkbox" name="media[]" value='{$item.media_id}'><img class="thumbpic" src="{$item.thumb}" />{$item.media_name}</div>
                         </label>
                     </foreach>
               </div>

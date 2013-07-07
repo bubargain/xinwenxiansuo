@@ -1,5 +1,4 @@
 <?php
-// 本文档自动生成，仅供测试运行
 header("Content-type: text/html; charset=utf-8");
 class IndexAction extends Action
 {

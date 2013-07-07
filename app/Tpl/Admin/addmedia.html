@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>添加媒体</title>
+  	 <link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>	
+	<div class="container">
+		<div class="span9">
+			<form method="post" enctype="multipart/form-data">
+				<h3>添加媒体</h3>
+				<table class="table">
+					<tr>
+						<th>媒体名称</th>
+						<td><input type='text' name="media_name" class='span4' /></td>
+					</tr>
+					<tr>
+						<th>类别</th>
+						<td>
+							<select name="catagory" class='span3'>
+								<option value='1'>中央媒体</option>
+								<option value='2'>地方媒体</option>	
+								<option value='3'>自媒体</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>邮箱</th>
+						<td><input name='media_email' type='text' class='span4' /></td>
+					</tr>
+					<tr>
+						<th>图片</th>
+						<td><input name='pic' type='text' class='span4' /></td>
+					</tr>
+					<tr>
+						<th>PASS</th>
+						<td><input name='pass' type='password' class='span4' /></td>
+					</tr>
+					
+				</table>
+				<hr>
+				<button class='btn btn-info'>确定</button>
+			</form>
+		</div>
+	</div>
+   </body>
+</html> 
+
