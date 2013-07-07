@@ -28,6 +28,12 @@
   font-weight: normal;
 }
 
+.thumbpic
+{
+	width:170px;
+	height:105px;
+}
+
 #scrollUp {
   bottom: 20px;
   right: 20px;
@@ -174,17 +180,18 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
             <div class="tab-content" id="myTabContent" style="min-height:100px">
               <div id="CentralMedia" class="tab-pane fade  active in">
                 	<?php if(is_array($central_media)): foreach($central_media as $key=>$item): ?><label class="span2 checkbox">
-                        	<input type="checkbox" name="media[]" value='<?php echo ($item["media_id"]); ?>'><img src="<?php echo ($item["thumb"]); ?>" />
+                        	<input type="checkbox" name="media[]" value='<?php echo ($item["media_id"]); ?>'>
+                        	<div class='text-center text-info'><img class="thumbpic" src="<?php echo ($item["thumb"]); ?>" /><?php echo ($item["media_name"]); ?></div>
                         </label><?php endforeach; endif; ?>
               </div>
               <div id="LocalMedia" class="tab-pane fade">
                		<?php if(is_array($local_media)): foreach($local_media as $key=>$item): ?><label class="span2 checkbox">
-                        	<input type="checkbox" name="media[]" value='<?php echo ($item["media_id"]); ?>'><img src="<?php echo ($item["thumb"]); ?>" />
+                        	<div class='text-center text-info'><input type="checkbox" name="media[]" value='<?php echo ($item["media_id"]); ?>'><img class="thumbpic" src="<?php echo ($item["thumb"]); ?>" /><?php echo ($item["media_name"]); ?></div>
                         </label><?php endforeach; endif; ?>
               </div>
               <div id="PersonalMedia" class="tab-pane fade">
                 	<?php if(is_array($self_media)): foreach($self_media as $key=>$item): ?><label class="span2 checkbox">
-                        	<input type="checkbox" name="media[]" value='<?php echo ($item["media_id"]); ?>'><img src="<?php echo ($item["thumb"]); ?>" />
+                        	<div class='text-center text-info'><input type="checkbox" name="media[]" value='<?php echo ($item["media_id"]); ?>'><img class="thumbpic" src="<?php echo ($item["thumb"]); ?>" /><?php echo ($item["media_name"]); ?></div>
                         </label><?php endforeach; endif; ?>
               </div>
             </div>
