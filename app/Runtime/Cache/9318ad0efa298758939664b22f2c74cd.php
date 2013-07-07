@@ -218,6 +218,27 @@ window.UEDITOR_HOME_URL = '__PUBLIC__/ueditor/';
  <script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
  <script src="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
  <script src="__PUBLIC__/js/bootstrap.min.js"></script>
+  <script src="__PUBLIC__/js/bootstrap-scrollup.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("img.lazy").unveil();
+        
+             $("#start-intro").click(function(){
+                bootstro.start();    
+            });
+
+             $.scrollUp({
+                  scrollName: 'scrollUp', // Element ID
+                  topDistance: '300', // Distance from top before showing element (px)
+                  topSpeed: 300, // Speed back to top (ms)
+                  animation: 'fade', // Fade, slide, none
+                  animationInSpeed: 200, // Animation in speed (ms)
+                  animationOutSpeed: 200, // Animation out speed (ms)
+                  scrollText: '', // Text for element
+                  activeOverlay: false  // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+            });
+          });
+    </script>
         
   <SCRIPT LANGUAGE="JavaScript">
   	$('#annUpload').tooltip('hide')

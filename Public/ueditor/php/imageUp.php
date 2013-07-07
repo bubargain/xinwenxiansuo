@@ -17,8 +17,8 @@
 
     //上传配置
     $config = array(
-        "savePath" => ($path == "1" ? "upload/" : "upload1/"),
-        "maxSize" => 1000, //单位KB
+        "savePath" => ($path == "1" ? "../../img/upload/" : "../../img/imp/"),
+        "maxSize" => 2000, //单位KB
         "allowFiles" => array(".gif", ".png", ".jpg", ".jpeg", ".bmp")
     );
 
